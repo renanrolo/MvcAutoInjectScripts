@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\ScriptInjector\BaseController.cs" />
     <Compile Include="Models\ScriptInjector\BundleInjectConfig.cs" />
+    <Compile Include="Models\SimpleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\About.js" />
     <Content Include="Views\Home\Index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
