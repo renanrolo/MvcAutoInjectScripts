@@ -35,7 +35,7 @@ One of the greatest benefit from this pattner is to simplify the location and cr
 </configuration>
 ```
 
-2) You need to inherit BaseController onto all your controllers.
+2) You need to inherit ScriptInjectorController  onto all your controllers.
 
 3) The javascript files are loaded into the bundle, so you have to register it on application start
 ```
