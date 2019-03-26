@@ -126,16 +126,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Custom\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Custom\CustomAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ScriptInjector\BaseController.cs" />
-    <Compile Include="Models\ScriptInjector\BundleInjectConfig.cs" />
+    <Compile Include="ScriptInjector\ScriptInjectorController.cs" />
+    <Compile Include="ScriptInjector\BundleInjectConfig.cs" />
     <Compile Include="Models\SimpleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Custom\Views\Home\Index.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -146,6 +149,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Custom\Views\web.config" />
+    <Content Include="Areas\Custom\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Custom\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Custom\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -177,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Custom\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

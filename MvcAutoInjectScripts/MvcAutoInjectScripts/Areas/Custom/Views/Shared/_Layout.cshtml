@@ -16,19 +16,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Auto Inject Script Project", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Almost About", "AboutCopy", "Home", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Area Custom", "Index", "Home", new { Area = "Custom" }, null)</li>
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -40,8 +36,5 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-
-    @Html.Partial("_injectScript")
-
 </body>
 </html>

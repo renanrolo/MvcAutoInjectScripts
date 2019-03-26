@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MvcAutoInjectScripts.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : ScriptInjectorController
     {
         public ActionResult Index()
         {
@@ -16,7 +16,7 @@ namespace MvcAutoInjectScripts.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "You clicked on link 'About'";
 
             var viewModel = new SimpleViewModel
             {
@@ -30,14 +30,14 @@ namespace MvcAutoInjectScripts.Controllers
         [HttpPost]
         public ActionResult About(SimpleViewModel viewModel)
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "You clicked on link 'About'";
 
             return View(viewModel);
         }
 
         public ActionResult AboutCopy()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "You clicked on link 'AboutCopy'";
 
             var viewModel = new SimpleViewModel
             {

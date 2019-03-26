@@ -8,7 +8,7 @@ using System.IO;
 
 namespace System.Web.Mvc
 {
-    public class BaseController : Controller
+    public class ScriptInjectorController : Controller
     {
         protected new internal ViewResult View()
         {
@@ -51,7 +51,11 @@ namespace System.Web.Mvc
         {
             string _action = action ?? ControllerContext.RouteData.Values["action"].ToString();
             string _controller = ControllerContext.RouteData.Values["controller"].ToString();
-            string bundlePath = String.Format("~/bundles/Views{0}{1}", _controller, _action);
+            var _area = ControllerContext.RouteData.DataTokens["Area"];
+            _area = _area != null ? String.Format("Areas{0}", _area) : _area;
+            string bundlePath = String.Format("~/bundles/{0}Views{1}{2}", _area, _controller, _action);
+
+
 
             var bundleExists = System.Web.Optimization.BundleTable.Bundles.Any(x => x.Path == bundlePath);
 
